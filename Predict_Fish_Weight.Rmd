@@ -115,6 +115,14 @@ summary.lm(Pikebest)
 The r -square is 0.9794  and the residual model is 70.00. the p value is 8.679. this is the best model.
 ### Best Two regressor model
 
+```{r}
+Piketwo <-lm(Weight~Length1+Length3, data=Pike)
+summary.lm(Piketwo)
+```
+The residual standard error is 92.56
+the Adjusted r square is 0.9649
+The P value is 2.57e-11
+
 ## Roach
 
 ### Best Models

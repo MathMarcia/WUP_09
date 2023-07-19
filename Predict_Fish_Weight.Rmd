@@ -105,6 +105,14 @@ subsets(regsubsets.out,statistic="adjr2",legend="bottomright",main="Adjusted R^2
 The best element model is L1 and L3, and the best regression model is all of them.
 ### Best Models
 
+```{r}
+Pikebest <-lm(Weight~.,data=Pike)
+summary.lm(Pikebest)
+``` 
+
+
+
+The r -square is 0.9794  and the residual model is 70.00. the p value is 8.679. this is the best model.
 ### Best Two regressor model
 
 ## Roach

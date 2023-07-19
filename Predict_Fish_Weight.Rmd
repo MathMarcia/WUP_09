@@ -125,6 +125,23 @@ The P value is 2.57e-11
 The smallest P value is the best result.
 ## Roach
 
+```{r}
+library(leaps)
+regsubsets.out <-
+    regsubsets(Weight ~ .,
+               data = Roach,
+               nbest = 1,       # 1 best model for each number of predictors
+               nvmax = NULL,    # NULL for no limit on number of variables
+               force.in = NULL, force.out = NULL,
+               method = "exhaustive")
+
+summary.out <- summary(regsubsets.out)
+as.data.frame(summary.out$outmat)
+library(car)
+subsets(regsubsets.out,statistic="adjr2",legend="bottom",main="Adjusted R^2")
+```
+The best regression model is width. the second best regression is Length3 and width.
+
 ### Best Models
 
 ### Best Two regressor model

@@ -122,7 +122,7 @@ summary.lm(Piketwo)
 The residual standard error is 92.56
 the Adjusted r square is 0.9649
 The P value is 2.57e-11
-
+The smallest P value is the best result.
 ## Roach
 
 ### Best Models

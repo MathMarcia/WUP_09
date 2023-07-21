@@ -172,4 +172,4 @@ This code is creating a linear regression model to understand how the "Weight" o
 
 ## Final Summary Statements
 
-
+Today I learned to create plots and compared the three fishes type. I also learned to create a linear regression model and how each element is related to the length, width and height. Then to interpret the results.

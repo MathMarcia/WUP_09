@@ -112,17 +112,20 @@ summary.lm(Pikebest)
 
 
 
-The r -square is 0.9794  and the residual model is 70.00. the p value is 8.679. this is the best model.
+The adjusted r -square is 0.9794  and the residual standard Error is 70.86. the p value is 8.679e. This is the best model.
 ### Best Two regressor model
 
 ```{r}
 Piketwo <-lm(Weight~Length1+Length3, data=Pike)
 summary.lm(Piketwo)
 ```
+
 The residual standard error is 92.56
-the Adjusted r square is 0.9649
+The Adjusted r square is 0.9649
 The P value is 2.57e-11
 The smallest P value is the best result.
+
+
 ## Roach
 
 ```{r}
@@ -140,10 +143,26 @@ as.data.frame(summary.out$outmat)
 library(car)
 subsets(regsubsets.out,statistic="adjr2",legend="bottom",main="Adjusted R^2")
 ```
-The best regression model is width. the second best regression is Length3 and width.
+The best regression model is width. The second best regression is Length3 and width.
 
 ### Best Models
 
+```{r}
+Roachbest <-lm(Weight~.,data=Roach)
+summary.lm(Roachbest)
+``` 
+This code is creating a linear regression model to understand how the "Weight" of roach fish is related to other variables in the dataset "Roach." Then, it generates a summary of the model to help us interpret the results and understand how well the model explains the relationship between the variables.
+
+
 ### Best Two regressor model
 
+```{r}
+Roachtwo <-lm(Weight~Length1+Length3, data=Roach)
+summary.lm(Roachtwo)
+```
+
+This code is creating a linear regression model to understand how the "Weight" of roach fish is related to their "Length1" and "Length3." Then, it generates a summary of the model to help us interpret the results and understand how well the lengths of the roach fish explain their weight.
+
 ## Final Summary Statements
+
+
